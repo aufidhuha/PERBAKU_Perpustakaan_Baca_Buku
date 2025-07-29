@@ -559,7 +559,7 @@ public class pinjamPanel extends javax.swing.JPanel {
         String tanggalKembali = new SimpleDateFormat("yyyy-MM-dd").format(JDate);
         
         if (tablePinjam.getRowCount() <= 0) {
-            JOptionPane.showMessageDialog(null, "Harap memilih buku untuk Transaksi", "Warning", JOptionPane.WARNING_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Harap memilih buku untuk Peminjaman", "Warning", JOptionPane.WARNING_MESSAGE);
             return;
         }
         
@@ -572,7 +572,7 @@ public class pinjamPanel extends javax.swing.JPanel {
             ResultSet rsVar = psVar.executeQuery();
             
             if (rsVar.next()) {
-                JOptionPane.showMessageDialog(null, "Transaksi sudah dilakukan, harap Muat Ulang untuk membuat Transaksi baru", "Warning", JOptionPane.WARNING_MESSAGE);
+                JOptionPane.showMessageDialog(null, "Peminjaman sudah dilakukan, harap Muat Ulang untuk membuat Peminjaman baru", "Warning", JOptionPane.WARNING_MESSAGE);
                 return;
             } else {
                 
@@ -602,7 +602,7 @@ public class pinjamPanel extends javax.swing.JPanel {
                 }
                 psVarDetailPinjam.close();
                 
-                JOptionPane.showMessageDialog(null, "Transaksi berhasil", "Informasi", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(null, "Peminjaman berhasil", "Informasi", JOptionPane.INFORMATION_MESSAGE);
             }
             
         } catch (SQLException sQLException) {
