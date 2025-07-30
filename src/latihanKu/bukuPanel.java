@@ -459,15 +459,16 @@ public class bukuPanel extends javax.swing.JPanel {
         String kategori = kodeKategori(cbKategoriBuku.getSelectedItem().toString());
         String penerbit = txtNamaPenerbit.getText();
         Date tanggalDate = (Date) JDateTanggalTerbit.getDate();
-        String tanggal = new SimpleDateFormat("yyyy-MM-dd").format(tanggalDate);
         
         // Date tanggalDate = JDateTanggalTerbit.getDate();
         // java.sql.Date tanggal = new java.sql.Date(tanggalDate.getTime());
         
-        if (idBuku.isBlank() || namaBuku.isBlank() || kategori.isBlank() || penerbit.isBlank() || tanggal == null) {
+        if (idBuku.isBlank() || namaBuku.isBlank() || kategori.isBlank() || penerbit.isBlank() || tanggalDate == null) {
             JOptionPane.showMessageDialog(null, "Harap memilih data atau mengisi data secara keseluruhan");
             return;
         }
+        
+        String tanggal = new SimpleDateFormat("yyyy-MM-dd").format(tanggalDate);
         
         try {
             String sqlCheck = "SELECT * FROM buku WHERE id_buku = ?";
