@@ -553,6 +553,11 @@ public class bukuPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
         String idBuku = txtIDBuku.getText();
         
+        if (idBuku.isBlank() || txtNamaBuku.getText().isBlank()) {
+            JOptionPane.showMessageDialog(null, "Harap memilih buku yang ingin dihapus");
+            return;
+        }
+        
         int yesOrNo = JOptionPane.showConfirmDialog(null, "Apakah anda yakin ingin menghapus data ini?", "Konfirmasi", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
         
         if (yesOrNo == JOptionPane.YES_OPTION) {

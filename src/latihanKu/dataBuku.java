@@ -235,6 +235,11 @@ public class dataBuku extends javax.swing.JFrame {
         // TODO add your handling code here:
         int choiceRow = tableDataBuku.getSelectedRow();
         
+        if (choiceRow < 0) {
+            JOptionPane.showMessageDialog(null, "Harap memilih Buku yang dipinjam");
+            return;
+        }
+        
         String idBuku = tableDataBuku.getValueAt(choiceRow, 0).toString();
         String namaBuku = tableDataBuku.getValueAt(choiceRow, 1).toString();
         

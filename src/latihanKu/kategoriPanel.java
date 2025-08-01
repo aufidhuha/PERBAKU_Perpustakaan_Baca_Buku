@@ -360,7 +360,7 @@ public class kategoriPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
         String idKategori = txtIDKategori.getText();
         
-        if(idKategori.isBlank()){
+        if(idKategori.isBlank() || txtNamaKategori.getText().isBlank()){
             JOptionPane.showMessageDialog(null, "Harap memilih data yang ingin dihapus");
             return;
         }
